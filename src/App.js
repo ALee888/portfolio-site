@@ -48,6 +48,7 @@ const App = () => {
                             <ProjectCard project={project}/>
                         ))}
                     </div>
+                    <h2>More projects coming soon!</h2>
                 </div>
             </div>
             <div className='contact' id='contact'>

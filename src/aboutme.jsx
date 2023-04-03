@@ -33,13 +33,9 @@ const About = () => {
                 <li>Docker</li>
                 <li>Linux</li>
                 <li>Git</li>
-                <li>RESTful API</li>
+                <li>RESTful APIs</li>
                 <li>React.js</li>
-                <li>Node.js</li>
-                <li>Flask</li>
-                <li>Django</li>
                 <li>Visual Studio Code</li>
-                <li>Testing</li>
                 <li>Azure DevOps</li>
                 <li>CI/CD</li>
               </ul>
@@ -50,7 +46,8 @@ const About = () => {
               </ul>
               <h2>Frameworks</h2>
               <ul>
-                <li></li>
+                <li>Node.js</li>
+                <li>Flask</li>
               </ul>
             </div>  
           </div>

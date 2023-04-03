@@ -241,6 +241,11 @@ li {
     /* including the name */
     margin-top: 50px;
 }
+.projects h2 {
+    color: var(--fire-brick);
+    text-align: center;   
+    font-size: 30px;
+}
 .projectlist {
     width: 100%;
     margin-top: 3rem;
@@ -271,7 +276,7 @@ li {
     width: 100%;
     opacity: 0;
     top: 0;
-    color: #f9d3b4;
+    color: var(--tea-green);
 }
 
 .project:hover {
@@ -312,7 +317,7 @@ li {
 .project div:nth-of-type(3) h3 {
     margin-top: 5px;
     font-family: "Roboto Slab", serif;
-    color: #f9d3b4;
+    color: var(--tea-green);
 }
 
 .project:hover div:nth-of-type(2) {
