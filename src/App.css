@@ -1,38 +1,343 @@
-.App {
-  text-align: center;
+/* CSS HEX 
+--gunmetal: #1f363dff;
+--cerulean: #40798cff;
+--verdigris: #70a9a1ff;
+--cambridge-blue: #9ec1a3ff;
+--tea-green: #cfe0c3ff;
+*/
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --gunmetal: #1f363dff;
+    --cerulean: #40798cff;
+    --verdigris: #70a9a1ff;
+    --cambridge-blue: #9ec1a3ff;
+    --tea-green: #cfe0c3ff;
+    --fire-brick: #A43223;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cerulean);
+    margin-top: 50px;
+}
+h1 {
+    color: var(--tea-green);
+    text-align: center;
+    font-family: "Trirong", sans-serif;   
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* NavBar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gunmetal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+    z-index: 9999;
+}
+nav img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+nav button {
+    background-color: transparent;
+    color: var(--tea-green);
+    font-size: inherit;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+nav button:hover {
+    color: #ddd;
+}
+nav button:focus {
+    outline: none;
+    box-shadow: none;
+}
+nav button.active {
+    color: #fff;
+    background-color: #4CAF50;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* Header */
+header {
+    background: url(../public/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.headshot {
+    flex-grow: 1;
+    width: auto;
+    height: 600px;
+    object-fit: contain;
+    border-color: var(--fire-brick);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+    height: 100%;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(31, 54, 61, 0), rgba(164, 50, 35, 1));
+    
+}
+
+.info h2 {
+    color: var(--tea-green);
+    font-family: "Trirong", sans-serif;   
+}
+
+.socialLink {
+    width: 50px;
+    height: 50px;
+    object-fit:cover;
+}
+
+/* BODY below Header*/
+.body {
+    /* Area */
+    background-color: var(--cerulean);
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* About Section */
+.about {
+    /* Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 50px;
+    color: white;
+    font-family: "Calibri", sans-serif;
+}
+
+.bio {
+    flex: 1;
+    padding: 50px;
+    font-family: Helvetica;
+    font-size: 20px;
+    line-height: 2;
+}
+.knowledge {
+    flex: 1;
+    padding: 50px;
+    background-color: var(--verdigris);
+    border: 5px ridge var(--fire-brick);
+    box-shadow: -3px 3px 10px black;
+}
+.knowledge .container {
+    display: flex;
+    justify-content: center;
+}
+.knowledge h1 {
+    color: var(--gunmetal);
+}
+.knowledge h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Experience Section */
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 50px;
+    background-color: var(--verdigris);
+    color: white;
+    font-family: "Calibri", sans-serif;
+
+}
+
+.experience h1 {
+    color: var(--gunmetal)
+}
+
+.experience .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.experience img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+.experience h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--fire-brick)
+}
+
+.experience p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.experience .summary {
+    color: black;
+}
+
+.experience ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.experience li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.experience li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+/* Projects */
+.projects {
+    /* including the name */
+    margin-top: 50px;
+}
+.projectlist {
+    width: 100%;
+    margin-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 310px;
+    height: 460px;
+    margin: 1.5rem;
+
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.project div:nth-of-type(1) {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    color: #f9d3b4;
+}
+
+.project:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+}
+
+.project div:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+}
+
+.project div:nth-of-type(2) img {
+    height: 100%;
+    width: 100%;
+}
+
+.project div:nth-of-type(3) {
+    z-index: 2;
+    background-color: #343739;
+    padding: 16px 24px 24px 24px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.project div:nth-of-type(3) span {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #f0f0f0;
+}
+
+.project div:nth-of-type(3) h3 {
+    margin-top: 5px;
+    font-family: "Roboto Slab", serif;
+    color: #f9d3b4;
+}
+
+.project:hover div:nth-of-type(2) {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.project:hover div:nth-of-type(3) {
+    background-color: transparent; 
+}
+
+.project:hover div:nth-of-type(1) {
+    opacity: 1;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--gunmetal);
+    color: var(--tea-green); 
 }

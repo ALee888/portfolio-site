@@ -1,0 +1,21 @@
+[
+    {
+        "name": "TuneShuffle",
+        "tags": [""],
+        "description": "React and Python web app for randomizing and recommending songs using spotifyAPI.",
+        "url": "https://tuneshuffle.herokuapp.com/",
+        "thumbnail": "./TuneshuffleThumbnail.png"
+    },
+    {
+        "name": "D&D NPC Creator",
+        "languages": ["JavaScript"],
+        "technologies": [""],
+        "description": "Tool to create a random NPC for dungeons in dragons.",
+        "thumbnail": "https://preview.redd.it/4lj7efby9vf31.png?width=4960&format=png&auto=webp&v=enabled&s=213f4fe1c08866e1609a6550f150f2de50025c07"
+    },
+    {
+        "name": "Placeholder!",
+        "description": "This is a test",
+        "thumbnail": "N/A"
+    }
+]
