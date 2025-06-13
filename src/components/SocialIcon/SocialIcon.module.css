@@ -1,0 +1,22 @@
+/* SocialIcon.module.css */
+.socialLink {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  transform: translateY(-3px);
+}
+
+.socialLink:hover .socialIcon {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

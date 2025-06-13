@@ -1,0 +1,131 @@
+/* Modern gradient overlay */
+.header {
+  background: 
+    linear-gradient(rgba(31, 54, 61, 0.7)), 
+    url('/public/background.jpg') no-repeat center/cover fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.headshot {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--fire-brick);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: float 6s ease-in-out infinite;
+}
+
+.info {
+  background: rgba(31, 54, 61, 0.85);
+  padding: 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border-left: 5px solid var(--tea-green);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--tea-green);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--cambridge-blue);
+  margin-bottom: 2rem;
+}
+
+/* Resume Button */
+.resumeButton {
+  background: var(--fire-brick);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.resumeButton:hover {
+  background: #8c2a1d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.resumeButton:active {
+  transform: translateY(0);
+}
+
+.downloadIcon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.resumeButton:hover .downloadIcon {
+  transform: translateY(2px);
+  animation: bounce 0.5s infinite alternate;
+}
+
+/* Optional pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.resumeButton:focus {
+  outline: none;
+  animation: pulse 1s;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(4px); }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .headshot {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .info {
+    border-left: none;
+    border-top: 5px solid var(--tea-green);
+  }
+}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProjectCard = ({ project }) => {
   return (
     <a href={project.url}>

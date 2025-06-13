@@ -1,41 +1,20 @@
-import React from 'react';
 import './App.css';
-import About from './components/aboutme';
-import Experience from './components/experience';
+import About from './components/AboutMe/AboutMe';
+import Experience from './components/Experience/experience';
+import Header from './components/Header/header';
 import ProjectCard from './components/ProjectCard';
 import projectList from './ProjectList.json';
 import Navbar from './components/NavBar/Navbar';
 
 
-const links = {
-    "linkedin": "https://www.linkedin.com/in/adam-f-lee/",
-    "github": "https://github.com/ALee888"
-}
+
 const App = () => {
     // var about = About();
     // var experience = Experience();
     return (
         <div className="app">
             <Navbar />
-            <header id='header'>
-                <img className="headshot" src='./headshot.jpg' alt="Headshot"/>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"></link>
-                <div className="info">
-                    <h1>Adam Lee</h1>
-                    <h2>adamflee88@gmail.com</h2>
-                    <h2>(661)400-5579</h2>
-                    <table>
-                        <tr>
-                            <td>
-                                <a href={links.linkedin}><img className="socialLink" alt="linkedin" src='./logos/linkedin-logo.png'/></a>
-                            </td>
-                            <td>
-                                <a href={links.github}><img className="socialLink" alt="github" src='./logos/github-logo.jpg'/></a>   
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </header>
+            <Header />
             
             <div className='body'>
                 <About />
