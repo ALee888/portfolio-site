@@ -1,0 +1,124 @@
+/* NavBar */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--gunmetal) 0%, #1a2d33 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height, 60px);
+  font-size: 1.1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 0 20px;
+}
+
+.navScrolled {
+  height: var(--nav-scrolled-height, 50px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.logo:hover {
+  transform: scale(1.15) rotate(10deg);
+}
+
+.navItems {
+  display: flex;
+  gap: 10px;
+  margin-right: auto;
+}
+
+.button {
+  background: transparent;
+  color: var(--tea-green);
+  font-size: inherit;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.buttonActive {
+  background-color: var(--cerulean);
+  color: white;
+  font-weight: 600;
+  border-color: var(--tea-green);
+}
+
+.buttonActive::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: var(--tea-green);
+  margin: 5px auto 0;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--tea-green);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .navItems {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .navExpanded .navItems {
+    display: flex;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+}

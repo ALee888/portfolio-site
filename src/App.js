@@ -1,20 +1,19 @@
 import React from 'react';
 import './App.css';
-import About from './aboutme';
-import Experience from './experience';
-import ProjectCard from './ProjectCard';
+import About from './components/aboutme';
+import Experience from './components/experience';
+import ProjectCard from './components/ProjectCard';
 import projectList from './ProjectList.json';
-import Navbar from './NavBar';
+import Navbar from './components/NavBar/Navbar';
 
 
 const links = {
     "linkedin": "https://www.linkedin.com/in/adam-f-lee/",
-    "github": "https://github.com/ALee888",
-    "instagram": "https://www.instagram.com/"
+    "github": "https://github.com/ALee888"
 }
 const App = () => {
-    var about = About();
-    var experience = Experience();
+    // var about = About();
+    // var experience = Experience();
     return (
         <div className="app">
             <Navbar />
@@ -23,7 +22,7 @@ const App = () => {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong"></link>
                 <div className="info">
                     <h1>Adam Lee</h1>
-                    <h2>al748x@gmail.com</h2>
+                    <h2>adamflee88@gmail.com</h2>
                     <h2>(661)400-5579</h2>
                     <table>
                         <tr>
@@ -39,8 +38,8 @@ const App = () => {
             </header>
             
             <div className='body'>
-                {about}
-                {experience}
+                <About />
+                <Experience />
                 <div className='projects' id='projects'>
                     <h1>Personal Projects</h1>
                     <div className="projectlist">
