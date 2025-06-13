@@ -1,0 +1,87 @@
+/* Experience Section */
+.experience {
+    /* Keep your existing base styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 50px;
+    background-color: var(--verdigris);
+    color: white;
+    font-family: "Calibri", sans-serif;
+}
+
+/* Add these new styles below your existing ones */
+.experienceItem {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid var(--fire-brick);
+}
+
+.experienceItem:last-child {
+    margin-bottom: 0;
+}
+
+.companyInfo {
+    flex-grow: 1;
+}
+
+.position {
+    font-size: 1.2rem;
+    color: var(--tea-green);
+    margin: 5px 0;
+}
+
+.period {
+    font-style: italic;
+    color: #ddd;
+}
+
+.summary {
+    font-style: italic;
+    margin: 15px 0;
+    color: var(--cambridge-blue);
+    font-size: 1.1rem;
+}
+
+/* Update your existing list styles rather than replace */
+.experience ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.experience li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.experience li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--fire-brick);
+    font-size: 1.2rem;
+}
+
+/* Keep your existing container styles but add enhancements */
+.experience .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.experience img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    margin-right: 25px;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+}

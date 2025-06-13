@@ -1,0 +1,92 @@
+/* Skills Grid */
+.skills {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start; /* Prevents uneven card heights */
+}
+
+.skillCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 3px solid var(--fire-brick);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skillHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--tea-green);
+}
+
+.skillIcon {
+  font-size: 1.5rem;
+  color: var(--cambridge-blue);
+}
+
+.skillCard ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skillCard li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.skillCard li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--fire-brick);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.skillCard {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.skillCard:nth-child(1) { animation-delay: 0.1s; }
+.skillCard:nth-child(2) { animation-delay: 0.2s; }
+.skillCard:nth-child(3) { animation-delay: 0.3s; }
+.skillCard:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

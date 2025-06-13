@@ -1,7 +1,9 @@
+import styles from './projects.module.css'
+
 const ProjectCard = ({ project }) => {
   return (
     <a href={project.url}>
-      <div className="project" id='project'>
+      <div className={styles.project} id='project'>
           <div>
             <p>{project.name}</p>
           </div>

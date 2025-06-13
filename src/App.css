@@ -10,29 +10,33 @@
     border: 0;
     box-sizing: border-box;
 }
-
+#root {
+    background: var(--gunmetal);
+}
 :root {
 
     /* Retro futurist */
-    --background: #F0ECE3;
-    --text-primary: #222222;
-    --accent-violet: #7C3AED;
-    --accent-blue: #0EA5E9;
-    --accent-pink: #FB7185;
-    --muted: #E5E7EB;
-    
     --alabaster: #f0ece3ff;
     --eerie-black: #222222ff;
     --blue-violet: #7c3aedff;
     --picton-blue: #0ea5e9ff;
     --bright-pink-crayola: #fb7185ff;
 
+    /* custom palette */
     --gunmetal: #1f363dff;
     --cerulean: #40798cff;
     --verdigris: #70a9a1ff;
     --cambridge-blue: #9ec1a3ff;
     --tea-green: #cfe0c3ff;
     --fire-brick: #A43223;
+
+    /* Active palette */
+    --background: var(--gunmetal);
+    --text-primary: #222222;
+    --accent-violet: #7C3AED;
+    --accent-blue: #0EA5E9;
+    --accent-pink: #FB7185;
+    --muted: #E5E7EB;
 }
 
 .app {
@@ -40,6 +44,9 @@
     flex-direction: column;
     background-color: var(--cerulean);
     margin-top: 50px;
+}
+body {
+    background-color: var(--gunmetal);
 }
 h1 {
     color: var(--tea-green);
@@ -52,245 +59,12 @@ h1 {
 
 
 /* BODY below Header*/
-.body {
+main {
     /* Area */
     background-color: var(--cerulean);
     display: flex;
     flex-direction: column;
-
-}
-
-body {
     padding-top: var(--nav-height);
-}
-
-/* About Section */
-.about {
-    /* Flexbox */
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
-    padding: 50px;
-    color: white;
-    font-family: "Calibri", sans-serif;
-}
-
-.bio {
-    flex: 1;
-    padding: 50px;
-    font-family: Helvetica;
-    font-size: 20px;
-    line-height: 2;
-}
-.knowledge {
-    flex: 1;
-    padding: 50px;
-    background-color: var(--verdigris);
-    border: 5px ridge var(--fire-brick);
-    box-shadow: -3px 3px 10px black;
-}
-.knowledge .container {
-    display: flex;
-    justify-content: center;
-}
-.knowledge h1 {
-    color: var(--gunmetal);
-}
-.knowledge h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-li {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Experience Section */
-/* EXPERIENCE SECTION (updated) */
-.experience {
-    /* Keep your existing base styles */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
-    margin-top: 50px;
-    background-color: var(--verdigris);
-    color: white;
-    font-family: "Calibri", sans-serif;
-}
-
-/* Add these new styles below your existing ones */
-.experience-item {
-    margin-bottom: 40px;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    border-left: 3px solid var(--fire-brick);
-}
-
-.experience-item:last-child {
-    margin-bottom: 0;
-}
-
-.company-info {
-    flex-grow: 1;
-}
-
-.position {
-    font-size: 1.2rem;
-    color: var(--tea-green);
-    margin: 5px 0;
-}
-
-.period {
-    font-style: italic;
-    color: #ddd;
-}
-
-.summary {
-    font-style: italic;
-    margin: 15px 0;
-    color: var(--cambridge-blue);
-    font-size: 1.1rem;
-}
-
-/* Update your existing list styles rather than replace */
-.experience ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-    font-size: 20px;
-}
-
-.experience li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-
-.experience li:before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: var(--fire-brick);
-    font-size: 1.2rem;
-}
-
-/* Keep your existing container styles but add enhancements */
-.experience .container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.experience img {
-    height: 80px;
-    width: 80px;
-    object-fit: contain;
-    margin-right: 25px;
-    background: white;
-    padding: 8px;
-    border-radius: 8px;
-}
-
-/* Projects */
-.projects {
-    /* including the name */
-    margin-top: 50px;
-}
-.projects h2 {
-    color: var(--fire-brick);
-    text-align: center;   
-    font-size: 30px;
-}
-.projectlist {
-    width: 100%;
-    margin-top: 3rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.project {
-    width: 310px;
-    height: 460px;
-    margin: 1.5rem;
-
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    border: none;
-
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
-}
-
-.project div:nth-of-type(1) {
-    position: absolute;
-    padding: 16px;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-    color: var(--tea-green);
-}
-
-.project:hover {
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05, 1.05);
-}
-
-.project div:nth-of-type(2) {
-    width: 100%;
-    height: 100%;
-}
-
-.project div:nth-of-type(2) img {
-    height: 100%;
-    width: 100%;
-}
-
-.project div:nth-of-type(3) {
-    z-index: 2;
-    background-color: #343739;
-    padding: 16px 24px 24px 24px;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-.project div:nth-of-type(3) span {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    color: #f0f0f0;
-}
-
-.project div:nth-of-type(3) h3 {
-    margin-top: 5px;
-    font-family: "Roboto Slab", serif;
-    color: var(--tea-green);
-}
-
-.project:hover div:nth-of-type(2) {
-    height: 100%;
-    opacity: 0.3;
-}
-
-.project:hover div:nth-of-type(3) {
-    background-color: transparent; 
-}
-
-.project:hover div:nth-of-type(1) {
-    opacity: 1;
 }
 
 /* Contact */
